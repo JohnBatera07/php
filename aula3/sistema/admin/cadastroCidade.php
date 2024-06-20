@@ -12,6 +12,14 @@
       <?php require "includes/menu.php"; ?>
       <h1>Cadastro Cidade</h1>
 
+      <form method="post" action="acao/acaoPais.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome da Cidade</label>
+    <input type="text" name="nome" class="form-control" placeholder="Cadastro Cidade">
+  </div>
+  <input type="submit" name="enviar" value="Cadastrar Cidade" class="btn btn-primary">
+</form>
+
       <?php require "includes/rodape.php"; ?>
       </div>
 
