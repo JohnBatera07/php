@@ -23,10 +23,11 @@
           <a class="dropdown-item" href="cadastroPais.php">País</a>
           <a class="dropdown-item" href="cadastroEstado.php">Estado</a>
           <a class="dropdown-item" href="cadastroCidade.php">Cidade</a>
+          <a class="dropdown-item" href="envioEmail.php">Envio de Email</a>
         </div>
       </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="">Sair</a>
+    <a class="nav-link" href="sair.php">Sair</a>
   </li>
 </ul>
