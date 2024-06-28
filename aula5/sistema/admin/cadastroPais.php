@@ -20,11 +20,16 @@
       header("Location: ../index.php");
       session_destroy();
     }
-
     ?>
+    <h1>Cadastro País</h1>
 
-
-    <h1>Seja Bem Vindo</h1>
+    <form method="post" action="acao/acaoPais.php">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nome do País</label>
+        <input type="text" name="nome" class="form-control" placeholder="Cadastro País">
+      </div>
+      <input type="submit" name="enviar" value="Cadastrar País" class="btn btn-primary">
+    </form>
 
     <?php require "includes/rodape.php"; ?>
   </div>

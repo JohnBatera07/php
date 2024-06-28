@@ -11,20 +11,28 @@
 
 <body>
   <div class="container">
-    <?php require "includes/menu.php";
-    session_start();
+    <?php require "includes/menu.php"; ?>
+    <h1>Enviar Email</h1>
 
-    if (isset($_SESSION['logar'])) {
-      echo "Bem Vindo";
-    } else {
-      header("Location: ../index.php");
-      session_destroy();
-    }
-
-    ?>
-
-
-    <h1>Seja Bem Vindo</h1>
+    <form method="post" action="acao/acaoEmail.php">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Digite Seu Nome</label>
+        <input type="text" name="nome" class="form-control" placeholder="Digite seu Nome">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Digite Seu Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Digite seu Email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Digite o Assunto</label>
+        <input type="text" name="assunto" class="form-control" placeholder="Digite o   Assunto">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mensagem</label>
+        <textarea class="form-control" name="mensagem" rows="3"></textarea>
+      </div>
+      <input type="submit" name="enviar" value="Cadastrar País" class="btn btn-primary">
+    </form>
 
     <?php require "includes/rodape.php"; ?>
   </div>

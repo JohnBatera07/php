@@ -10,21 +10,38 @@
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
     <?php require "includes/menu.php";
     session_start();
 
     if (isset($_SESSION['logar'])) {
-      echo "Bem Vindo";
+      //echo "Bem Vindo";
     } else {
       header("Location: ../index.php");
       session_destroy();
     }
-
     ?>
+    <h1>Cadastro Produto</h1>
 
-
-    <h1>Seja Bem Vindo</h1>
+    <form method="post" action="acao/acaoProduto.php" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nome do Produto</label>
+        <input type="text" name="produto" class="form-control" placeholder="Nome do Produto">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Categoria do Produto</label>
+        <input type="text" name="categoria" class="form-control" placeholder="Categoria do Produto">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Upload de Imagem</label>
+        <input type="file" name="foto" class="form-control-file" placeholder="Upload de Imagem">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mensagem:</label>
+        <textarea class="form-control" name="mensagem" rows="3"></textarea>
+      </div>
+      <input type="submit" name="enviar" value="Cadastrar Produto" class="btn btn-primary">
+    </form>
 
     <?php require "includes/rodape.php"; ?>
   </div>
