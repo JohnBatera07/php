@@ -1,0 +1,12 @@
+{
+    "name": "jvbat/sistema",
+    "autoload": {
+        "classmap": ["sistema"]
+    },
+    "authors": [
+        {
+            "name": "jv"
+        }
+    ],
+    "require": {}
+}
