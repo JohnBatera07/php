@@ -1,0 +1,7 @@
+{
+    "name": "03620505039/sistema",
+    "autoload": {
+        "classmap":["sistema"]
+    },
+    "require": {}
+}
